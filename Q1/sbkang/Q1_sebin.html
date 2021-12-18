@@ -1,48 +1,35 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>가위바위보</title>
-    <style>
-        body {
-            linear-
-        }
-        main {
-            text-align: center;
-
-        }
-        .common{
-            /* border-color: #e7e7e7; */
-            border-radius: 20px;
-            border: 0;
-            outline: 0;
-            overflow: hidden;
-            padding: 10px;
-            /* width: 200px;
-            height: 200px; */
-        }
-        img {
-            width: 230px;
-            height: 200px;
-        }
-    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Yeon+Sung&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <main>
-        <button class="common sissors">
-            <img src="img/sissors.png" alt="가위">
+        <p>나랑 가위바위보 할래?</p>
+        <div id="computer" onload="showImage()"></div>
+        <button class="btn">
+            ✂️sissors
+            <!-- <img src="4_sissors.png" alt="가위" class="sissors"> -->
         </button>
-        <button class="common rock">
-            <img src="img/rock.jpeg" alt="바위">
+        <button class="btn">
+            ✊rock
+            <!-- <img src="3_rock.png" alt="바위" class="rock"> -->
         </button>
-        <button class="common paper">
-            <img src="img/paper.png" alt="보">
-        </button>
+        <button class="btn">
+            ✋paper
+            <!-- <img src="2_paper.png" alt="보" class="paper"> -->
     </main>
-    <script>
-        document.getElementById
-    </script>
+    </button>
+    <img class="bono" src="1_bono.jpeg" alt="보노보노">
+    <div id="result"></div>
+    <script src="script.js"></script>
 </body>
+
 </html>
