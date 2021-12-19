@@ -9,13 +9,16 @@
 }
 
 .wrap {
-  width: 400px;
+  width: 700px;
   margin: 10px auto;
   padding-top: 100px;
   text-align: center;
 }
 .content {
   font-size: 100px;
+}
+.text-result {
+  margin-top: 10px;
 }
 .btn_restart {
   display: block;

@@ -1,4 +1,6 @@
 function checkGame(randVal, userVal) {
+  let text_result = document.querySelector(".text-result");
+  console.log(text_result);
   switch (randVal) {
     case "✊":
       randVal = "1";
@@ -12,6 +14,7 @@ function checkGame(randVal, userVal) {
   }
   if (randVal == userVal) {
     alert("비겼습니다");
+    text_result.innerHTML = "비겼습니다";
   } else {
     if (randVal == 0) {
       result = userVal == 1 ? "이겼습니다" : "졌습니다";
@@ -21,18 +24,22 @@ function checkGame(randVal, userVal) {
       result = userVal == 0 ? "이겼습니다" : "졌습니다";
     }
     alert(result);
+    text_result.innerHTML = result;
   }
+}
+function runGame() {
+  randVal.innerHTML = arr[index++];
+  if (index == arr.length) index = 0;
 }
 
 const randVal = document.querySelector(".content");
 const arr = ["✊", "🖐", "✌️"];
 let index = 0;
-const runGame = setInterval(function () {
-  randVal.innerHTML = arr[index++];
-  if (index == arr.length) index = 0;
-}, 500);
-
 const btn = document.querySelectorAll(".btn");
+const btn_restart = document.querySelector(".btn_restart");
+
+let setGame = setInterval(runGame, 500);
+
 btn.forEach(function (element) {
   element.addEventListener("click", function () {
     switch (this.innerHTML) {
@@ -46,13 +53,11 @@ btn.forEach(function (element) {
         userVal = "0";
         break;
     }
-    clearInterval(runGame);
+    clearInterval(setGame);
     checkGame(randVal.innerHTML, userVal);
   });
 });
 
-// CHECK:: 아직 구현 못함 ㅠ
-let btn_restart = document.querySelector(".btn_restart");
-btn_paper.addEventListener("click", function () {
-  runGame = runGame;
+btn_restart.addEventListener("click", function () {
+  setGame = setInterval(runGame, 500);
 });
