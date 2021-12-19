@@ -1,70 +1,25 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>가위바위보</title>
     <link href="https://fonts.googleapis.com/css2?family=Yeon+Sung&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Yeon Sung', cursive;
-            padding: 0;
-            margin: 0;
-            background: linear-gradient(to right, red, blue, green, yellow);
-        }
-        main {
-            text-align: center;
-            height: 100vh;
-        }
-        p {
-            color: red;
-            font-size: 5em;
-            text-shadow: -2px 0 yellow, 0 2px yellow, 2px 0 yellow, 0 -2px yellow;
-            position: relative;
-            top: 7em;
-            left: -2em;
-            z-index: 10;
-            transform: rotate(10deg);
-        }
-        .bono {
-            position: absolute;
-            bottom: 3em;
-            left: 2em;
-            
-        }
-        .common{
-            border-radius: 20px;
-            border: 0;
-            outline: 0;
-            overflow: hidden;
-            margin: 10px;
-        }
-        .sissors,
-        .rock,
-        .paper {
-            width: 240px;
-            height: 200px;
-            transform: scale(110%);
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <main>
         <p>나랑 가위바위보 할래?</p>
-        <img class="bono" src="img/bono.jpeg" alt="보노보노">
-        <button class="common">
-            <img src="img/sissors.png" alt="가위" class="sissors">
-        </button>
-        <button class="common">
-            <img src="img/rock.png" alt="바위" class="rock">
-        </button>
-        <button class="common">
-            <img src="img/paper.png" alt="보" class="paper">
-        </button>
+        <div id="computer" onload="showImage()"></div>
+        <button class="btn">✂️sissors</button>
+        <button class="btn">✊rock</button>
+        <button class="btn">✋paper</button>
     </main>
-    <script>
-        document.getElementById
-    </script>
+    <img class="bono" src="1_bono.jpeg" alt="보노보노">
+    <script src="script.js"></script>
 </body>
+
 </html>

@@ -1,0 +1,31 @@
+body {
+  font-family: "Yeon Sung", cursive;
+  padding: 0;
+  margin: 0;
+  background: linear-gradient(to right, red, blue, green, yellow);
+}
+main {
+  text-align: center;
+}
+p {
+  color: red;
+  font-size: 5em;
+  text-shadow: -2px 0 yellow, 0 2px yellow, 2px 0 yellow, 0 -2px yellow;
+  transform: rotate(-10deg);
+}
+.bono {
+  position: relative;
+  left: 10em;
+}
+.btn {
+  border-radius: 20px;
+  border: 0;
+  outline: 0;
+  padding: 10px;
+  margin: 10px;
+  font-size: 18px;
+}
+#computer {
+  font-size: 2rem;
+  margin: 2rem;
+}
