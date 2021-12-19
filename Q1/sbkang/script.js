@@ -15,7 +15,7 @@ function intervalStart() {
         }
         computer.innerText = rsp[idx];
         idx++;
-    }, 1000);
+    }, 100);
 }
 
 intervalStart();
