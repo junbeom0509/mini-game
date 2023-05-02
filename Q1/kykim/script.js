@@ -37,3 +37,29 @@ button.forEach(function (element) {
         }
     });
 });
+
+
+button.forEach(function (element) {
+    element.addEventListener("click", function () {
+        let ch_result = 0;
+        let computerSelect = computer.innerText;
+        let userSelect = this.textContent;
+        let diff = rsp.indexOf(computerSelect) - rsp.indexOf(userSelect);
+        const resultElement = document.getElementById('sum');
+        let number = resultElement.innerText;
+        clearInterval(interval);
+        setTimeout(function () {
+            intervalStart();
+            result.innerText = "";
+        }, 1000);
+        if (computerSelect == userSelect) {
+            result.innerText = "Draw !";
+        } else if (diff == 1 || diff == -2) {
+            number = parseInt(number) + 1;
+            resultElement.innerText = number;
+        } else {
+            number = parseInt(number) - 1;
+            resultElement.innerText = number;
+        }
+    });
+});
